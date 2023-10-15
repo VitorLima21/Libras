@@ -116,7 +116,7 @@
             <option value="26">Sergipe</option>
             <option value="27">Tocantins</option>
           </select>
-          <h4>Unidades em <span id="estado"></span>:<h4>
+          <h4>Instrutores em <span id="estado"></span>:<h4>
           <div id="dadosLojas" style="overflow-y: scroll;  height: auto;max-height: 500px;border: 1px solid #ccc; padding: 10px;"> 
          
           </div>
@@ -155,13 +155,13 @@
               <!-- Adicione outras opções de estados aqui -->
             </select>
             <br>
-            <label for="lojaInput">Loja:</label>
+            <label for="lojaInput">Nome:</label>
             <input type="text" id="lojaInput" required>
             <br>
             <label for="foneInput">Fone:</label>
             <input type="text" id="foneInput" required>
             <br>
-            <label for="enderecoInput">Endereço:</label>
+            <label for="enderecoInput">Instagram:</label>
             <input type="text" id="enderecoInput" required>
             <br>
             <button type="button" id="adicionarUnidadeButton">Adicionar</button>
@@ -346,12 +346,12 @@
               //Ponto de melhoria, percorrer o array apenas nos itens relacionados ao estado clicado/marcado. (lazy)
               if(unidades[dicEstados[message]][i] != undefined){
                 document.getElementById("dadosLojas").innerHTML += 
-                '<br>Unidade: ' + 
+                '<br>Nome: ' + 
                 unidades[dicEstados[message]][i]['Loja'] + 
                 '<br>Fone: ' + 
                 unidades[dicEstados[message]][i]['Fone'] + 
-                '<br>Endereco: ' 
-                + unidades[dicEstados[message]][i]['Endereco'] + '<br>';
+                '<br>Instagram: <a href="https://www.instagram.com/' + unidades[dicEstados[message]][i]['Endereco'] + '">@'
+                  + unidades[dicEstados[message]][i]['Endereco'] + '</a><br>';
               }             
             }
           }
@@ -388,12 +388,13 @@
                 for(var i = 0; i < Object.keys(unidades).length;  i ++){ 
                   document.getElementById("estado").innerHTML = dicEstados[message];
                   document.getElementById("dadosLojas").innerHTML += 
-                  '<br>Unidade: ' + 
+                  '<br>Nome: ' + 
                   unidades[dicEstados[message]][i]['Loja'] + 
                   '<br>Fone: ' + 
                   unidades[dicEstados[message]][i]['Fone'] + 
-                  '<br>Endereco: ' 
-                  + unidades[dicEstados[message]][i]['Endereco'] + '<br>';
+                  '<br>Instagram: <a href="https://www.instagram.com/' + unidades[dicEstados[message]][i]['Endereco'] + '">@'
+                  + unidades[dicEstados[message]][i]['Endereco'] + '</a><br>';
+
                 }
               }
             
