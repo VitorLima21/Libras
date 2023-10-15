@@ -162,7 +162,7 @@
             <input type="text" id="foneInput" required>
             <br>
             <label for="enderecoInput">Instagram:</label>
-            <input type="text" id="enderecoInput" required>
+            <input type="text" id="enderecoInput" placeholder="Coloque apenas o nome exemplo: omundodasmaos" required>
             <br>
             <button type="button" id="adicionarUnidadeButton">Adicionar</button>
           </form>
@@ -350,7 +350,7 @@
                 unidades[dicEstados[message]][i]['Loja'] + 
                 '<br>Fone: ' + 
                 unidades[dicEstados[message]][i]['Fone'] + 
-                '<br>Instagram: <a href="https://www.instagram.com/' + unidades[dicEstados[message]][i]['Endereco'] + '">@'
+                '<br>Instagram: <a href="https://www.instagram.com/' + unidades[dicEstados[message]][i]['Endereco'] + '">'
                   + unidades[dicEstados[message]][i]['Endereco'] + '</a><br>';
               }             
             }
