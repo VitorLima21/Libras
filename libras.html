@@ -8,79 +8,65 @@
   </head>
   <body>
     <style>
-   body {
-    margin: 0;
-    padding: 0;
-    background: url('./b2ap3_amp_curso-de-libras.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-
-/* Estilo para tornar o texto do nome e dos elementos <li> branco */
-  .navbar-brand,
-.navbar-nav li a {
-    color: white;
-}
-.navbar-nav li {
-    list-style: none;
-}
-
-/* Estilos para o restante da barra de navegação */
-.navbar-nav {
-    margin-top: 14px;
-    display: flex;
-}
-
-.navbar-nav li {
+      
+        /* Estilos padrão para dispositivos não móveis (tamanho da tela maior que 768px) */
+        .navbar-nav {
+            margin-left: auto;
+            display: flex;
+        }
+        
+        .navbar-nav li {
     margin-right: 10px;
 }
-
-    /* Estilos para dispositivos móveis (tamanho da tela igual ou menor que 768px) */
-    @media (max-width: 768px) {
-        .navbar-nav {
-            margin-left: 0;
-            display: flex;
-            flex-wrap: wrap; /* Isso permite que todos os itens fluam para a próxima linha */
-        }
-
-        .navbar-nav li {
-            margin-right: 0;
-            margin-bottom: 10px; /* Adiciona espaçamento entre os elementos <li> */
-            flex-basis: 100%; /* Define a largura para 100% para que todos os elementos ocupem a largura total */
-        }
+            .navbar-nav li {
+        list-style: none;
     }
-
-
-  </style>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="./index.html">Curso de Libras</a>
-      <ul class="navbar-nav" style="margin-top: 14px;">
-          <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Página Inicial</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="./libras.html">Mapa Brasil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./sobre.html">Sobre Nós</a>
-          </li>
-          <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Serviços</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
-          </li> -->
-      </ul>
-  </nav>
-
-  <!-- <img src="./images.png" alt=""> -->
-    <!-- <div class="row">
+        
+        /* Estilos para dispositivos móveis (tamanho da tela igual ou menor que 768px) */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                margin-left: 0;
+                display: flex;
+                flex-wrap: wrap; /* Isso permite que todos os itens fluam para a próxima linha */
+            }
+        
+            .navbar-nav li {
+                margin-right: 0;
+                margin-bottom: 10px; /* Adiciona espaçamento entre os elementos <li> */
+                flex-basis: 100%; /* Define a largura para 100% para que todos os elementos ocupem a largura total */
+            }
+        }
+        
+        
+          </style>
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="./index.html">Curso de Libras</a>
+                <ul class="navbar-nav" style="margin-top: 14px;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./libras.html">Mapa Brasil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sobre.html">Sobre Nós</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li> -->
+              </ul>
+          </nav>
+          
+    <div class="row">
       <div class="col-md-6"> 
         <div id="regions_div" style="width: 900px; height: 500px;"></div>
       </div>
         <div class="col-md-6 feature">
           <h4 style="color:#00689D">Selecione um de nossos <br><b style="color:#00689D">Instrutores</b>, e o acompanhe </h3>
-          <p><b style="background-color:#00689D;color:white;font-size:1.5em">Orçamento</b></p><br>
+          <!-- <p><b style="background-color:#00689D;color:white;font-size:1.5em">Orçamento</b></p><br> -->
           <select id="seletorCombo" style="width: 50%;">
           <option>Selecione um Estado</option>
             <option value="1">Acre</option>
@@ -115,9 +101,9 @@
           <div id="dadosLojas" style="overflow-y: scroll;  height: auto;max-height: 500px;border: 1px solid #ccc; padding: 10px;"> 
          
           </div>
-          <button id="mostrarFormButton">+ Instrutor</button>
+          <button id="mostrarFormButton">Adicionar Instrutor</button>
           <form id="formAdicionarUnidade" style="display: none;">
-            <h4 style="color:#00689D">Adicione Novo Instrutor</h4>
+            <h4 style="color:#00689D">Adicionar Nova Unidade</h4>
             <label for="estadoSelect">Estado:</label>
             <select  id="estadoSelect">              
               <option value="Acre">Acre</option>
@@ -147,7 +133,7 @@
               <option value="Sao Paulo">Sao Paulo</option>
               <option value="Sergipe">Sergipe</option>
               <option value="Tocantins">Tocantins</option>
-              
+              <!-- Adicione outras opções de estados aqui -->
             </select>
             <br>
             <label for="lojaInput">Loja:</label>
@@ -161,10 +147,10 @@
             <br>
             <button type="button" id="adicionarUnidadeButton">Adicionar</button>
           </form>
-         
+          
           
         </div>
-    </div> -->
+    </div>
   </body>
 </html>
 
