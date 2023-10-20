@@ -73,36 +73,91 @@
           </li> -->
       </ul>
   </nav>
+
+  <div class="container">
+    <h4 id="texto1" style="text-align: justify; color: white;">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+        e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+        de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só
+         a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente 
+         inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens
+          de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração 
+          eletrônica como Aldus PageMaker.
+
+    
+    </h4>
+    <h4 id="texto2" style="text-align: justify; color: white;">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+        e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de 
+        tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu
+         não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo
+          essencialmente inalterado. Se popularizou na década de 60, quando a Letraset 
+          lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando 
+          passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+
+    </h4>
+  </div>
+
   <style>
     #iframe-container {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 40%; /* Defina a largura desejada */
-      height: 100%; /* Isso cobrirá a altura total da tela */
-    }
+    display: none; /* Oculta o iframe inicialmente */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%; /* Defina a largura desejada */
+    height: 100%; /* Isso cobrirá a altura total da tela */
+  }
     #iframe-container iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-  </style>
-  <button onclick="toggleIframe()">Clique para jogar e focar</button>
-  <div id="iframe-container" style="display: none;">
-    <iframe src="jogo.html" frameborder="0"></iframe>
-  </div>
-  
-  <script>
-  function toggleIframe() {
-    var iframeContainer = document.getElementById("iframe-container");
-    if (iframeContainer.style.display === "none") {
-      iframeContainer.style.display = "block"; // Exibir o iframe
-    } else {
-      iframeContainer.style.display = "none"; // Ocultar o iframe
+    
+    @media screen and (max-width: 767px) {
+    #iframe-container iframe {
+      width: 100%;
+      height: 50%;
+      border: none;
+    }
+    #iframe-container {
+      position: fixed;
+      bottom: 0; /* Fixa o contêiner na parte inferior da tela */
+      right: 0; /* Fixa o contêiner à direita da tela */
+      width: 100%; /* Isso cobrirá toda a largura da tela */
+      height: 50%; /* Isso cobrirá metade da altura da tela a partir da parte inferior */
     }
   }
-  </script>
+  </style>
+   <div class="container">
+    <button id="sair-button" onclick="toggleIframe()" class="btn btn-secondary">Clique para jogar e focar</button>
+<div id="iframe-container">
+  <iframe src="jogo.html" frameborder="0"></iframe>
+</div>
+   </div>
   
+   <script>
+    var iframeVisible = false; // Variável para controlar a visibilidade do iframe
+    var textCleared = false; // Variável para controlar se o texto foi ocultado
+    
+    function toggleIframe() {
+      var iframeContainer = document.getElementById("iframe-container");
+      var button = document.getElementById("sair-button");
+      var text1 = document.getElementById("texto1");
+      var text2 = document.getElementById("texto2");
+    
+      if (iframeVisible) {
+        iframeContainer.style.display = "none"; // Ocultar o iframe
+        button.innerText = "Clique para jogar e focar"; // Restaurar o texto do botão
+        text1.style.display = "block"; // Mostrar o texto do primeiro <p>
+        text2.style.display = "block"; // Mostrar o texto do segundo <p>
+        iframeVisible = false;
+      } else {
+        iframeContainer.style.display = "block"; // Exibir o iframe
+        button.innerText = "Sair do jogo"; // Alterar o texto do botão
+        text1.style.display = "none"; // Ocultar o texto do primeiro <p>
+        text2.style.display = "none"; // Ocultar o texto do segundo <p>
+        iframeVisible = true;
+      }
+    }
+    </script>
   
 
 
