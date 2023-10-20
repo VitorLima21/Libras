@@ -130,6 +130,7 @@ function comparalistas(letra) {
     if (vitoria == true) {
         abreModal("PARABÉNS", "você ACERTOU! ✨");
         tentativas = 0;
+        
     }
 }
 
@@ -165,12 +166,20 @@ function abreModal(titulo, mensagem) {
     modalTitulo.innerText = titulo;
 
     let modalBody = document.getElementById("modalBody")
-    modalBody.innerHTML = mensagem;
-
+    modalBody.innerHTML = mensagem;    
     $("#myModal").modal({
         show: true
     });
+    
 }
+
+function recarregarPagina() {
+    location.reload(); // Isso recarrega a página
+}
+
+// Event listener para o botão "Fechar"
+document.getElementById('fecharModal').addEventListener('click', recarregarPagina);
+
 
 let btnReiniciar = document.querySelector("#btnReiniciar")
 btnReiniciar.addEventListener("click", function () {
