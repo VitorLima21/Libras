@@ -58,6 +58,9 @@
           <li class="nav-item active">
               <a class="nav-link" href="./index.html">Página Inicial</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./jogo.html">Jogo</a>
+        </li>
           <li class="nav-item">
               <a class="nav-link" href="./libras.html">Mapa Brasil</a>
           </li>
@@ -72,6 +75,38 @@
           </li> -->
       </ul>
   </nav>
+  <style>
+    #iframe-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 40%; /* Defina a largura desejada */
+      height: 100%; /* Isso cobrirá a altura total da tela */
+    }
+    #iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+  <button onclick="toggleIframe()">Clique para jogar e focar</button>
+  <div id="iframe-container" style="display: none;">
+    <iframe src="jogo.html" frameborder="0"></iframe>
+  </div>
+  
+  <script>
+  function toggleIframe() {
+    var iframeContainer = document.getElementById("iframe-container");
+    if (iframeContainer.style.display === "none") {
+      iframeContainer.style.display = "block"; // Exibir o iframe
+    } else {
+      iframeContainer.style.display = "none"; // Ocultar o iframe
+    }
+  }
+  </script>
+  
+  
+
 
   <!-- <img src="./images.png" alt=""> -->
     <!-- <div class="row">
