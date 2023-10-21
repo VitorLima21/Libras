@@ -83,16 +83,18 @@
   </nav>
 
   <div class="container">
-    <h4 id="texto1" style="text-align: justify; color: white;">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
-        e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
-        de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só
-         a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente 
-         inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens
-          de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração 
-          eletrônica como Aldus PageMaker.
-
-    
-    </h4>
+   
+    <h4 id="texto1" style="text-align: justify; color: white;" >Curiosidades sobre LIBRAS - Blog</h4>
+    <p id="texto2" style="text-align: justify; color: white;"> 
+        A LIBRAS é uma língua reconhecida por lei no Brasil: No dia 24 de abril de 2002, a Lei nº 10.436 foi sancionada para reconhecer a Libras como meio legal de comunicação no Brasil. Desde então, esse meio teve várias conquistas. 
+        <br><br>LIBRAS não é um português em gestos: A Libras é uma língua autônoma. Ela faz parte da “Família Francesa” das línguas de sinais. Mas ela não é igual à Língua Francesa de Sinais, já que cada país tem a sua língua própria. 
+        <br><br>Durante o Miss Brasil 2008, por exemplo, uma das candidatas se comunicava por meio de uma intérprete de Libras. Ela rejeitou a classificação de “deficiente auditiva”, alegando que poderia ser vista de forma pejorativa. De acordo com o IBGE, 9,7 milhões de brasileiros são surdos ou têm deficiência auditiva. 
+        <br><br>Libras não é a língua natural de surdos: Não é correto afirmar que a Libras é a língua natural dos surdos. A palavra “surdos” abrange uma infinidade de pessoas. Como você viu, não há um único “tipo” de surdo em nenhum lugar do mundo, por isso a diversidade deve ser colocada sob os holofotes. Há surdos que ouvem, outros que não ouvem, alguns que usam Libras e outros que não usam. 
+        <br><br>  Curiosidades sobre libras: nem todo surdo usa Libras: Não são todos os surdos que nascem surdos. Há os que perdem a audição de forma progressiva ou súbita em algum ponto da vida. Também há quem perde parte da audição. Há casos em que é possível optar pela reabilitação auditiva ou que o português é falado. Quando um ouvinte perde a audição após aprender o português, ele pode optar por implantes cocleares ou aparelhos auditivos. Também é possível não utilizar esses recursos e mesmo assim não usar Libras. Há outros recursos além da Libras para surdos, como os aparelhos de amplificação sonora, que vêm sendo substituídos por implantes cocleares. Também há datilografia, escrita de sinais (signwriting) e mais.
+        <br>
+      </p>
+   
+     
     <br>
     <div class="container">
       <video id="video-player" class="centered-video" width="640" height="360" controls>
@@ -101,15 +103,16 @@
       </video>
     </div>
     <br>
-    <h4 id="texto2" style="text-align: justify; color: white;">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
-        e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de 
-        tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu
-         não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo
-          essencialmente inalterado. Se popularizou na década de 60, quando a Letraset 
-          lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando 
-          passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+    <h4 id="texto4" style="text-align: justify; color: white;" >Tipos de  surdez </h4>
+    <p id="texto3" style="text-align: justify; color: white;"> 
+      Como o próprio nome diz, Libras – Língua Brasileira de Sinais, é a língua oficial das pessoas surdas no Brasil, ou seja, é uma língua brasileira. Cada país possui a sua língua de sinais. Assim como cada país tem o seu idioma. Como o português é o do Brasil, a língua de sinais segue a mesma lógica. Mais que isso, cada região do país também possui variações, como acontece com as línguas da modalidade oral-auditiva.
+      <br><br>Não seria possível haver uma única língua para todos os surdos do mundo, já que a língua é viva e conta com diversidade cultural ilimitada, sofrendo alterações à medida que o tempo passa e de acordo com cada pessoa e região. 
+      <span>Há alguns tipos de surdez e elas variam  em:</span>
+      <br>Surdez de condução ou transmissão é causada no ouvido externo e médio e às vezes pode ser tratada com cirurgia ou medicamentos;
+      <br>Surdez neurossensorial é causada no ouvido interno ou vias nervosas. Pode acontecer de forma progressiva e costuma ser permanente;
+      <br>Surdez mista pode ser causada tanto no ouvido externo ou médio quanto no interno. Acontece uma combinação entre perda auditiva condutiva e neurossensorial;
 
-    </h4>
+    </p>
   </div>
 
   <style>
@@ -160,6 +163,8 @@
     
       var text1 = document.getElementById("texto1");
       var text2 = document.getElementById("texto2");
+      var text3 = document.getElementById("texto3");
+      var text4 = document.getElementById("texto4");
       var video = document.getElementById("video-player");
     
       if (iframeVisible) {
@@ -167,6 +172,8 @@
         button.innerText = "Clique para jogar a forca"; // Restaurar o texto do botão
         text1.style.display = "block"; // Mostrar o texto do primeiro <p>
         text2.style.display = "block"; // Mostrar o texto do segundo <p>
+        text3.style.display = "block"; // Mostrar o texto do segundo <p>
+        text4.style.display = "block"; // Mostrar o texto do segundo <p>
           video.style.display = "block";
         iframeVisible = false;
       } else {
@@ -174,6 +181,8 @@
         button.innerText = "Sair do jogo"; // Alterar o texto do botão
         text1.style.display = "none"; // Ocultar o texto do primeiro <p>
         text2.style.display = "none"; // Ocultar o texto do segundo <p>
+        text3.style.display = "none"; // Ocultar o texto do segundo <p>
+        text4.style.display = "none"; // Ocultar o texto do segundo <p>
         video.style.display = "none";
         iframeVisible = true;
       }
