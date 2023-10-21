@@ -122,7 +122,7 @@
             <option value="27">Tocantins</option>
           </select>
           <h4>Instrutores em <span id="estado"></span>:<h4>
-          <div id="dadosLojas" style="overflow-y: scroll;  height: auto;max-height: 500px;border: 1px solid #ccc; padding: 10px;"> 
+          <div id="dadosLojas" style="  height: auto;border: 1px solid #ccc; padding: 10px;"> 
          
           </div>
           <button id="mostrarFormButton">Adicionar Instrutor</button>
@@ -218,21 +218,62 @@
         //o array abaixo pode ser alimentado por uma base de dados, ou api rest. no exemplo, deixei fixo.
         unidades = {
           
-          // 'Sao Paulo':
-          //  {
-          //   '0' : 
-          //   {
-          //     'Loja' : 'Araçatuba',
-          //     'Fone' : '18 3117 7471',
-          //     'Endereco' : 'Acesse o site'
-          //   }, '1' :
-          //   {
-          //     'Loja' : 'Bauru',
-          //     'Fone' : '(14) 3014-9181',
-          //     'Endereco' : ''
-          //   }
-          // },
-          'Bahia':
+          
+              "Sao Paulo": {
+                "0": {
+                  "Loja": "Mãos que falam",
+                  "Fone": "-------",
+                  "Endereco": "libras_eu_aprendo"
+                },
+                "1": {
+                  "Loja": "Neto Libras (Jeronimo Neto)",
+                  "Fone": "-------",
+                  "Endereco": "netolibras"
+                },
+                "2": {
+                  "Loja": "O mundo das mãos-Libras",
+                  "Fone": "-------",
+                  "Endereco": "omundodasmaos"
+                },
+                "3": {
+                  "Loja": "Tainá Moser | Falaí Libras",
+                  "Fone": "-------",
+                  "Endereco": "falailibras"
+                },
+                "4": {
+                  "Loja": "Cleidiane Santos",
+                  "Fone": "-------",
+                  "Endereco": "cleidiane_libras"
+                },
+                "5": {
+                  "Loja": "Fernanda Silva Tradutora Intérprete de Libras",
+                  "Fone": "-------",
+                  "Endereco": "fernandaasilvaa"
+                },
+                "6": {
+                  "Loja": "Ana Cassoli - Academia de Libras",
+                  "Fone": "-------",
+                  "Endereco": "academiadelibras"
+                },
+                "7": {
+                  "Loja": "João Pedro Libras",
+                  "Fone": "-------",
+                  "Endereco": "joaopedro_libras"
+                },
+                "8": {
+                  "Loja": "Libras NaQuebrada",
+                  "Fone": "-------",
+                  "Endereco": "librasnaquebrada"
+                },
+                "9": {
+                  "Loja": "Junior Costta",
+                  "Fone": "-------",
+                  "Endereco": "jclibras"
+                }
+              }
+            ,
+
+           'Bahia':
            {
             '0' : 
             {
@@ -248,6 +289,11 @@
               'Loja' : 'Visurdo',
               'Fone' : '------',
               'Endereco' : 'visurdo'
+            },'1' : 
+            {
+              'Loja' : 'Ana Beatriz Intérprete de Libras',
+              'Fone' : '-------',
+              'Endereco' : 'anabeatrizlibras'
             },
           }
         
@@ -319,7 +365,8 @@
               ultimoEstadoSelecionado = message;
           }
             document.getElementById("dadosLojas").innerHTML = '';
-            for(var i = 0; i < Object.keys(unidades).length; i ++){ 
+            for(var i = 0; i < 20; i ++){ 
+              console.log(unidades)
               document.getElementById("estado").innerHTML = dicEstados[message];
               //Ponto de melhoria, percorrer o array apenas nos itens relacionados ao estado clicado/marcado. (lazy)
               if(unidades[dicEstados[message]][i] != undefined){
